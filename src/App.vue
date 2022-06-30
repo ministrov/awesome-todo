@@ -123,8 +123,8 @@ body {
     position: absolute;
     content: "";
     z-index: -1;
-    top: 144px;
-    left: 164vh;
+    top: 4px;
+    left: 0;
     width: 396px;
     height: 68px;
     background: linear-gradient(180deg, #31394D 0%, #091739 100%);
@@ -136,8 +136,8 @@ body {
     position: absolute;
     content: "";
     z-index: -4;
-    top: 133px;
-    left: 164vh;
+    top: 18px;
+    left: 0px;
     width: 341px;
     height: 85px;
     background: linear-gradient(180deg, #4F5565 0%, #000000 53.65%);
