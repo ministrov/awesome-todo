@@ -9,6 +9,8 @@
 
 
     </div>
+
+    <p class="copyright">© 2022. Zhilin Anton</p>
   </div>
 </template>
 
@@ -32,17 +34,44 @@ body {
 }
 #app {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .content-wrapper {
   max-width: 420px;
   height: 570px;
-  background-color: #4F5565;
+  margin-top: 120px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: #252E42;
+  box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.25);
+  border-radius: 20px 0px 40px;
+  Offset: 0px, 14px
+  rgba(0, 0, 0, 0.25);
 }
 .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-width: 337px;
+  max-width: 360px;
+
+  &__title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+.copyright {
+  margin: 0;
+  margin-top: 31px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #414B62;
 }
 </style>

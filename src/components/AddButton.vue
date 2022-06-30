@@ -18,6 +18,11 @@ export default {}
   color: #FFFFFF;
   background-color: #FF8469;
   outline: none;
+  border: none;
   border-radius: 6px;
+
+  &:hover {
+    background-color: #D95133;
+  }
 }
 </style>
