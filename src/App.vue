@@ -2,14 +2,14 @@
   <div id="app">
     <div class="content-wrapper">
       <div class="main-header">
-        <h2 class="main-header__title">Todo List</h2>
+        <h2 class="main-header__title">Todo list</h2>
 
         <AddButton />
       </div>
 
       <ul class="todo-list">
         <li class="todo-list__item">
-          <CheckboxCom />
+          <CheckboxCom class="checkbox-input" />
 
           <div class="info-item">
             <h3 class="info-item__title">delectus aut autem</h3>
@@ -17,7 +17,7 @@
           </div>
         </li>
         <li class="todo-list__item">
-          <CheckboxCom />
+          <CheckboxCom class="checkbox-input" />
 
           <div class="info-item">
             <h3 class="info-item__title">quo laboriosam deleniti aut qui</h3>
@@ -104,10 +104,12 @@ body {
   align-items: center;
 }
 .content-wrapper {
+  position: relative;
+  z-index: 10;
   min-width: 360px;
   max-width: 420px;
-  height: 570px;
-  margin-top: 120px;
+  height: 482px;
+  margin-top: 162px;
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
@@ -116,6 +118,32 @@ body {
   box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.25);
   border-radius: 20px 0px 40px;
   overflow: hidden;
+
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: 144px;
+    left: 164vh;
+    width: 396px;
+    height: 68px;
+    background: linear-gradient(180deg, #31394D 0%, #091739 100%);
+    border-radius: 20px;
+    transform: rotate(-2.32deg);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    z-index: -4;
+    top: 133px;
+    left: 164vh;
+    width: 341px;
+    height: 85px;
+    background: linear-gradient(180deg, #4F5565 0%, #000000 53.65%);
+    border-radius: 20px;
+    transform: rotate(-4.48deg);
+  }
 }
 .main-header {
   display: flex;
@@ -141,10 +169,21 @@ body {
 }
 
 .todo-list {
+  position: relative;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 25px;
   padding: 0;
   list-style: none;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -6px;
+    right: -14px;
+    width: 4px;
+    height: 216px;
+    background-color: #FF8469;
+  }
 }
 .todo-list__item {
   display: flex;
@@ -152,7 +191,7 @@ body {
   max-width: 360px;
 
   &:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 }
 .info-item {
@@ -172,10 +211,23 @@ body {
 }
 .info-item__text {
   margin: 0;
-  margin-top: 5px;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.2;
   color: #4F5565;
+}
+.checkbox-input:checked + .info-item .info-item__title {
+  text-decoration: line-through;
+  text-decoration-color: #4F5565;
+  color: #4F5565;
+
+  &:hover {
+    text-decoration-color: #ffffff;
+    color: #ffffff;
+  }
+}
+.info-item:hover + .checkbox-input::after {
+  background-color: #FF8469;
+  opacity: 0.2;
 }
 </style>
