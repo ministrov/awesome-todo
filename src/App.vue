@@ -7,7 +7,70 @@
         <AddButton />
       </div>
 
+      <ul class="todo-list">
+        <li class="todo-list__item">
+          <CheckboxCom />
 
+          <div class="info-item">
+            <h3 class="info-item__title">delectus aut autem</h3>
+            <p class="info-item__text">laboriosam mollitia et enim quasi adipisci quia provident illum</p>
+          </div>
+        </li>
+        <li class="todo-list__item">
+          <CheckboxCom />
+
+          <div class="info-item">
+            <h3 class="info-item__title">quo laboriosam deleniti aut qui</h3>
+          </div>
+        </li>
+        <li class="todo-list__item">
+          <CheckboxCom />
+
+          <div class="info-item">
+            <h3 class="info-item__title">laboriosam mollitia et enim quasi adipisci quia provident illum</h3>
+          </div>
+        </li>
+        <li class="todo-list__item">
+          <CheckboxCom />
+
+          <div class="info-item">
+            <h3 class="info-item__title">laboriosam mollitia et enim quasi adipisci quia provident illum</h3>
+            <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
+          </div>
+        </li>
+        <li class="todo-list__item">
+          <CheckboxCom />
+
+          <div class="info-item">
+            <h3 class="info-item__title">repellendus sunt dolores architecto voluptatum</h3>
+            <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
+          </div>
+        </li>
+        <li class="todo-list__item">
+          <CheckboxCom />
+
+          <div class="info-item">
+            <h3 class="info-item__title">repellendus sunt dolores architecto voluptatum</h3>
+            <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
+          </div>
+        </li>
+        <li class="todo-list__item">
+          <CheckboxCom />
+
+          <div class="info-item">
+            <h3 class="info-item__title">repellendus sunt dolores architecto voluptatum</h3>
+            <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
+          </div>
+        </li>
+        <li class="todo-list__item">
+          <CheckboxCom />
+
+          <div class="info-item">
+            <h3 class="info-item__title">repellendus sunt dolores architecto voluptatum</h3>
+            <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
+          </div>
+        </li>
+      </ul>
     </div>
 
     <p class="copyright">© 2022. Zhilin Anton</p>
@@ -16,10 +79,12 @@
 
 <script>
 import AddButton from './components/AddButton.vue'
+import CheckboxCom from './components/CheckboxCom.vue'
 export default {
   name: 'App',
   components: {
-    AddButton
+    AddButton,
+    CheckboxCom
   }
 }
 </script>
@@ -73,5 +138,20 @@ body {
   font-weight: 500;
   line-height: 1.2;
   color: #414B62;
+}
+
+.todo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.todo-list__item {
+  display: flex;
+  align-items: center;
+  max-width: 360px;
+}
+.info-item {
+  max-width: 325px;
+  margin-left: 15px;
 }
 </style>
