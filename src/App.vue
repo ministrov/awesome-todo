@@ -1,76 +1,78 @@
 <template>
   <div id="app">
-    <div class="content-wrapper">
-      <div class="main-header">
-        <h2 class="main-header__title">Todo list</h2>
+    <div class="psudo-wrapper">
+      <div class="content-wrapper">
+        <div class="main-header">
+          <h2 class="main-header__title">Todo list</h2>
 
-        <AddButton />
+          <AddButton />
+        </div>
+
+        <ul class="todo-list">
+          <li class="todo-list__item">
+            <CheckboxCom class="checkbox-input" />
+
+            <div class="info-item">
+              <h3 class="info-item__title">delectus aut autem</h3>
+              <p class="info-item__text">laboriosam mollitia et enim quasi adipisci quia provident illum</p>
+            </div>
+          </li>
+          <li class="todo-list__item">
+            <CheckboxCom class="checkbox-input" />
+
+            <div class="info-item">
+              <h3 class="info-item__title">quo laboriosam deleniti aut qui</h3>
+            </div>
+          </li>
+          <li class="todo-list__item">
+            <CheckboxCom />
+
+            <div class="info-item">
+              <h3 class="info-item__title">laboriosam mollitia et enim quasi adipisci quia provident illum</h3>
+            </div>
+          </li>
+          <li class="todo-list__item">
+            <CheckboxCom />
+
+            <div class="info-item">
+              <h3 class="info-item__title">laboriosam mollitia et enim quasi adipisci quia provident illum</h3>
+              <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
+            </div>
+          </li>
+          <li class="todo-list__item">
+            <CheckboxCom />
+
+            <div class="info-item">
+              <h3 class="info-item__title">repellendus sunt dolores architecto voluptatum</h3>
+              <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
+            </div>
+          </li>
+          <li class="todo-list__item">
+            <CheckboxCom />
+
+            <div class="info-item">
+              <h3 class="info-item__title">repellendus sunt dolores architecto voluptatum</h3>
+              <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
+            </div>
+          </li>
+          <li class="todo-list__item">
+            <CheckboxCom />
+
+            <div class="info-item">
+              <h3 class="info-item__title">repellendus sunt dolores architecto voluptatum</h3>
+              <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
+            </div>
+          </li>
+          <li class="todo-list__item">
+            <CheckboxCom />
+
+            <div class="info-item">
+              <h3 class="info-item__title">repellendus sunt dolores architecto voluptatum</h3>
+              <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
+            </div>
+          </li>
+        </ul>
       </div>
-
-      <ul class="todo-list">
-        <li class="todo-list__item">
-          <CheckboxCom class="checkbox-input" />
-
-          <div class="info-item">
-            <h3 class="info-item__title">delectus aut autem</h3>
-            <p class="info-item__text">laboriosam mollitia et enim quasi adipisci quia provident illum</p>
-          </div>
-        </li>
-        <li class="todo-list__item">
-          <CheckboxCom class="checkbox-input" />
-
-          <div class="info-item">
-            <h3 class="info-item__title">quo laboriosam deleniti aut qui</h3>
-          </div>
-        </li>
-        <li class="todo-list__item">
-          <CheckboxCom />
-
-          <div class="info-item">
-            <h3 class="info-item__title">laboriosam mollitia et enim quasi adipisci quia provident illum</h3>
-          </div>
-        </li>
-        <li class="todo-list__item">
-          <CheckboxCom />
-
-          <div class="info-item">
-            <h3 class="info-item__title">laboriosam mollitia et enim quasi adipisci quia provident illum</h3>
-            <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
-          </div>
-        </li>
-        <li class="todo-list__item">
-          <CheckboxCom />
-
-          <div class="info-item">
-            <h3 class="info-item__title">repellendus sunt dolores architecto voluptatum</h3>
-            <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
-          </div>
-        </li>
-        <li class="todo-list__item">
-          <CheckboxCom />
-
-          <div class="info-item">
-            <h3 class="info-item__title">repellendus sunt dolores architecto voluptatum</h3>
-            <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
-          </div>
-        </li>
-        <li class="todo-list__item">
-          <CheckboxCom />
-
-          <div class="info-item">
-            <h3 class="info-item__title">repellendus sunt dolores architecto voluptatum</h3>
-            <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
-          </div>
-        </li>
-        <li class="todo-list__item">
-          <CheckboxCom />
-
-          <div class="info-item">
-            <h3 class="info-item__title">repellendus sunt dolores architecto voluptatum</h3>
-            <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
-          </div>
-        </li>
-      </ul>
     </div>
 
     <p class="copyright">© 2022. Zhilin Anton</p>
@@ -109,7 +111,7 @@ body {
   min-width: 360px;
   max-width: 420px;
   height: 482px;
-  margin-top: 162px;
+  margin-top: 155px;
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
@@ -117,13 +119,16 @@ body {
   background: #252E42;
   box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.25);
   border-radius: 20px 0px 40px;
-  overflow: hidden;
+  overflow: auto;
+}
+.psudo-wrapper {
+  position: relative;
 
   &::after {
     position: absolute;
     content: "";
-    z-index: -1;
-    top: 4px;
+    z-index: -2;
+    top: 135px;
     left: 0;
     width: 396px;
     height: 68px;
@@ -136,8 +141,8 @@ body {
     position: absolute;
     content: "";
     z-index: -4;
-    top: 18px;
-    left: 0px;
+    top: 126px;
+    left: 2px;
     width: 341px;
     height: 85px;
     background: linear-gradient(180deg, #4F5565 0%, #000000 53.65%);
@@ -192,6 +197,10 @@ body {
 
   &:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  @media (max-width: 400px) {
+    max-width: 336px;
   }
 }
 .info-item {
