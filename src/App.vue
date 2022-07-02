@@ -9,7 +9,7 @@
         </div>
 
         <ul class="todo-list">
-          <li class="todo-list__item">
+          <li class="todo-list__item todo-list__item--1">
             <CheckboxCom class="checkbox-input" />
 
             <div class="info-item">
@@ -17,21 +17,21 @@
               <p class="info-item__text">laboriosam mollitia et enim quasi adipisci quia provident illum</p>
             </div>
           </li>
-          <li class="todo-list__item">
+          <li class="todo-list__item todo-list__item--2">
             <CheckboxCom class="checkbox-input" />
 
             <div class="info-item">
               <h3 class="info-item__title">quo laboriosam deleniti aut qui</h3>
             </div>
           </li>
-          <li class="todo-list__item">
+          <li class="todo-list__item todo-list__item--3">
             <CheckboxCom />
 
             <div class="info-item">
               <h3 class="info-item__title">laboriosam mollitia et enim quasi adipisci quia provident illum</h3>
             </div>
           </li>
-          <li class="todo-list__item">
+          <li class="todo-list__item todo-list__item--4">
             <CheckboxCom />
 
             <div class="info-item">
@@ -39,7 +39,7 @@
               <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
             </div>
           </li>
-          <li class="todo-list__item">
+          <li class="todo-list__item todo-list__item--5">
             <CheckboxCom />
 
             <div class="info-item">
@@ -47,7 +47,7 @@
               <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
             </div>
           </li>
-          <li class="todo-list__item">
+          <li class="todo-list__item todo-list__item--6">
             <CheckboxCom />
 
             <div class="info-item">
@@ -55,7 +55,7 @@
               <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
             </div>
           </li>
-          <li class="todo-list__item">
+          <li class="todo-list__item todo-list__item--7">
             <CheckboxCom />
 
             <div class="info-item">
@@ -63,7 +63,7 @@
               <p class="info-item__text">accusamus eos facilis sint et aut voluptatem</p>
             </div>
           </li>
-          <li class="todo-list__item">
+          <li class="todo-list__item todo-list__item--8">
             <CheckboxCom />
 
             <div class="info-item">
@@ -82,6 +82,7 @@
 <script>
 import AddButton from './components/AddButton.vue'
 import CheckboxCom from './components/CheckboxCom.vue'
+
 export default {
   name: 'App',
   components: {
@@ -108,8 +109,6 @@ body {
 .content-wrapper {
   position: relative;
   z-index: 10;
-  min-width: 360px;
-  max-width: 420px;
   height: 482px;
   margin-top: 155px;
   padding-top: 30px;
@@ -119,7 +118,7 @@ body {
   background: #252E42;
   box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.25);
   border-radius: 20px 0px 40px;
-  overflow: auto;
+  overflow: hidden;
 }
 .psudo-wrapper {
   position: relative;
@@ -164,15 +163,6 @@ body {
     line-height: 1.2;
   }
 }
-.copyright {
-  margin: 0;
-  margin-top: 31px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.2;
-  color: #414B62;
-}
-
 .todo-list {
   position: relative;
   margin: 0;
@@ -191,9 +181,9 @@ body {
   }
 }
 .todo-list__item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 6% 1fr;
   align-items: center;
-  max-width: 360px;
 
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -201,6 +191,14 @@ body {
 
   @media (max-width: 400px) {
     max-width: 336px;
+  }
+}
+.todo-list__item--5,
+.todo-list__item--6,
+.todo-list__item--7,
+.todo-list__item--8 {
+  @media (max-width: 442px) {
+    display: none;
   }
 }
 .info-item {
@@ -238,5 +236,13 @@ body {
 .info-item:hover + .checkbox-input::after {
   background-color: #FF8469;
   opacity: 0.2;
+}
+.copyright {
+  margin: 0;
+  margin-top: 31px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #414B62;
 }
 </style>
