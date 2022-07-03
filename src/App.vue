@@ -8,7 +8,7 @@
           <AddButton />
         </div>
 
-        <ul class="todo-list">
+        <ul class="todo-list" data-simplebar>
           <li class="todo-list__item todo-list__item--1">
             <CheckboxCom class="checkbox-input" />
 
@@ -244,5 +244,10 @@ body {
   font-weight: 500;
   line-height: 1.2;
   color: #414B62;
+}
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  width: 4px;
+  height: 216px;
+  background-color: #FF8469;
 }
 </style>
