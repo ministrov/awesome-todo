@@ -10,8 +10,8 @@ export default {}
 <style lang="scss" scoped>
 .add-button {
   display: block;
-  width: 57px;
-  height: 27px;
+  width: 53px;
+  height: 26px;
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
